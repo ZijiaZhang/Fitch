@@ -11,6 +11,7 @@ public class MainPanel extends JFrame implements ActionListener {
     private final int height = 600;
     private Button addStep = new Button();
     private Button addSubproof = new Button();
+    private Button deleteStep = new Button();
 
     public MainPanel(){
         super("  ");
@@ -32,6 +33,11 @@ public class MainPanel extends JFrame implements ActionListener {
         addSubproof.addActionListener(this);
         this.add(addSubproof);
 
+        deleteStep.setLabel("Delete Step");
+        deleteStep.setPreferredSize(new Dimension(200,100));
+        deleteStep.setVisible(true);
+        deleteStep.addActionListener(this);
+        this.add(deleteStep);
         this.add(ProofPanel.getInstance());
 
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -55,5 +61,7 @@ public class MainPanel extends JFrame implements ActionListener {
             ProofPanel.getInstance().addStep();
         else if(source.equals(addSubproof))
             ProofPanel.getInstance().addSubProof();
+        else if(source.equals(deleteStep))
+            ProofPanel.getInstance().deleteStep();
     }
 }

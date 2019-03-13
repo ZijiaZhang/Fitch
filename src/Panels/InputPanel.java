@@ -1,5 +1,6 @@
 package Panels;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-public class InputPanel extends Panel implements ActionListener {
+public class InputPanel extends JPanel implements ActionListener {
     private static InputPanel inputPanel;
     private final int buttonSize_x = 20;
     private final int buttonSize_y = 40;

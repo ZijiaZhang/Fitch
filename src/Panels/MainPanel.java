@@ -22,25 +22,29 @@ public class MainPanel extends JFrame implements ActionListener {
         this.add(InputPanel.getInstance());
 
         addStep.setLabel("Add Step");
-        addStep.setPreferredSize(new Dimension(200,100));
+        //addStep.setPreferredSize(new Dimension(200,100));
+        addStep.setMaximumSize(new Dimension(Integer.MAX_VALUE,100));
         addStep.setVisible(true);
         addStep.addActionListener(this);
         this.add(addStep);
 
         addSubproof.setLabel("Add SubProof");
-        addSubproof.setPreferredSize(new Dimension(200,100));
+        //addSubproof.setPreferredSize(new Dimension(200,100));
+        addSubproof.setMaximumSize(new Dimension(Integer.MAX_VALUE,100));
         addSubproof.setVisible(true);
         addSubproof.addActionListener(this);
         this.add(addSubproof);
 
         deleteStep.setLabel("Delete Step");
-        deleteStep.setPreferredSize(new Dimension(200,100));
+        //deleteStep.setPreferredSize(new Dimension(200,100));
+        deleteStep.setMaximumSize(new Dimension(Integer.MAX_VALUE,100));
         deleteStep.setVisible(true);
         deleteStep.addActionListener(this);
         this.add(deleteStep);
         this.add(ProofPanel.getInstance());
 
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.revalidate();
         setVisible(true);
     }
 
